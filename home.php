@@ -48,7 +48,7 @@
                     session_start();
                     if (isset($_SESSION['email']) && isset($_SESSION['pword']))
                     {
-                        echo "<a class='nav-link' href='login_check.php'>PROFILE</a>";
+                        echo "<a class='nav-link' href='afterregister.php'>PROFILE</a>";
                       echo "<a class='nav-link' href='logout.php'>LOG OUT</a>";
                     }
                     else{
