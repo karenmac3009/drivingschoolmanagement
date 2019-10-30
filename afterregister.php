@@ -113,18 +113,19 @@ border: 10px solid blue;
                  while($row=mysqli_fetch_assoc($result))
                  {
                   echo "<tr><th>  Type of Student </th><td>".$row["typeofstudent"]."</td></tr>";
+			 if(($row['typeofpackage'] == '15 Days Personal Training for Rs1000/-') or ($row['typeofpackage'] == '1 Month Personal Training for Rs2200/-') or ($row['typeofpackage'] == '2 Months Personal Training for Rs3500/-'))
+                       {
+                          echo "<button class='hid'></button>";
+                        }
+                  else{
+                        echo "<center><button type='submit' class='button' name='submit' value='submit'><a href='videos.php'>Access Videos</a></button>
+                          </center>";
+                        }
                   echo "<tr><th> Type of Package  </th><td>".$row["typeofpackage"]."</td></tr>";
                   echo "<tr><th>Location</th><td>".$row["location"]."</td></tr>";
                   echo "<tr><th>Batch</th><td>".$row["batch"]."</td></tr></table></center>";
                  }
-                 if(($row["typeofpackage"]=="15 Days Personal Training for Rs1000/-")||($row["typeofpackage"]=="1 Month Personal Training for Rs2200/-")||($row["typeofpackage"]=="2 Months Personal Training for Rs3500/-"))
-                 {
-
-                 }
-                 else{
-                  echo "<center><button type='submit' class='button' name='submit' value='submit'><a href='videos.php'>Access Videos</a></button>
-                          </center>";      
-                 }
+                 
               }
           else 
             {
